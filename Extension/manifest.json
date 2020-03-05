@@ -1,0 +1,31 @@
+{
+    "name":"OAC Scroll",
+    "version":"0.0.1",
+    "description": "Add the Scroll Feature to classic home",
+    "manifest_version":2,
+    "permissions":["activeTab"],
+    "browser_action":{
+        "default_popup":"popup.html",
+        "default_icon": {
+            "16": "32.png",
+            "32":"32.png",
+            "48": "32.png",
+            "128": "32.png"
+          }
+    },
+    "content_scripts":[
+        {
+            "matches": ["https://geaoac-geappliancesoraclecloud.analytics.ocp.oraclecloud.com/*","https://geaoactest-geappliancesoraclecloud.analytics.ocp.oraclecloud.com/*","https://oactest3-geappliancesoraclecloud.analytics.ocp.oraclecloud.com/*"],
+            "js":["content.js"],
+            "css":["style.css"]
+        }
+    ],
+    "icons": {
+        "16": "32.png",
+        "32":"32.png",
+        "48": "32.png",
+        "128": "32.png"
+      }
+
+
+}
